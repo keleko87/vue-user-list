@@ -2,6 +2,11 @@
 
 CRUD users with Vue
 
+## Mock Server Postman data
+``` 
+Watch "postman-data" folder and import collection and environment in your Postman
+```
+
 ## Project setup
 ```
 npm install
@@ -17,20 +22,12 @@ npm run serve
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
 
 ### Lints and fixes files
 ```
 npm run lint
 ```
 
-### Run your unit tests
-```
-npm run test:unit
-```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
