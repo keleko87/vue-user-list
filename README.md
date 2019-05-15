@@ -3,8 +3,8 @@
 CRUD users with Vue
 
 ## Mock Server Postman data
-postman-data folder. Import collection and environment in your Postman
-
+``` Watch "postman-data" folder and import collection and environment in your Postman
+```
 
 ## Project setup
 ```
