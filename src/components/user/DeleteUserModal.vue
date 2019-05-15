@@ -1,6 +1,6 @@
 <template>
   <div>    
-    <button-modal @trigger="showDeleteModal = true">Delete</button-modal>
+    <button-modal class="delete" @trigger="showDeleteModal = true">Delete</button-modal>
 
     <modal v-if="showDeleteModal" @close="showDeleteModal = false">
       <div slot="header">

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button-modal @trigger="showEditModal = true">Update</button-modal>
+    <button-modal class="edit" @trigger="showEditModal = true">Update</button-modal>
 
     <modal v-if="showEditModal">
       <div slot="header">
