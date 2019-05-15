@@ -35,12 +35,6 @@
 export default {
 
   props: ['show'],
-
-  data() {
-    return { 
-      // show: false
-    };
-  },
   
   methods: {  
     close() {

@@ -107,37 +107,43 @@ export default {
     },
 
     updateUser() {
+      this.user.birthDate = this.transformDate(this.user.birthDate);
+      
       // Mock server will response the Postman example
-      return userService.updateUser(this.user.id, this.user)
+      return userService.updateUser('28e3cb460-770f-11e9-814a-e7308885276f', this.user)
         .then((res) => res.data)
         .then(data => { 
-          console.log(data);
-          const usersWithoutUserUpdated = this.users.filter(user => user.id !== this.user.id); 
-          this.users = usersWithoutUserUpdated.push(this.user);
-          this.close();
+          window.console.log('UPDATED', data);
+
+          // Simulate update user in a BBDD and return collection Users updated
+          let users = this.users.slice();
+          users = users.filter(user => user.id !== this.user.id);
+          users.push(this.user);
+          this.$emit('change', users);
+          this.closeModal();
         });
     },
 
     createUser() {
       this.user.id = this.addId();
       this.user.birthDate = this.transformDate(this.user.birthDate);
-      const user = Object.assign({}, this.user);
-      delete this.user;
-      this.users.push(user);
-    
-      event.target.reset();
-      
+          
       // Mock server will response the Postman example
-      return userService.createUser(user)
+      return userService.createUser(this.user)
         .then((res) => res.data)
         .then(data => { 
-          console.log(data) 
+          window.console.log('CREATE', data);
+
+          // Simulate add user in a BBDD and return in collection Users updated
+          const user = Object.assign({}, this.user);
           this.user = {};
+          const users = this.users.push(user);
+          this.$emit('change', users);
           this.closeModal();
         });
     },
 
-    addUser() {
+    addUser() {      
       if (!this.userInfo) {
         this.createUser();
       } else {

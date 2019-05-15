@@ -1,10 +1,10 @@
 export default {
-  id: 0,
+  id: '',
   name: '',
   email: '',
   birthDate: '',
   address: {
-    id: 0,
+    id: '',
     street: '',
     state: '',
     city: '',

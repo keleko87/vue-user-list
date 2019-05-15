@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <button class="delete" @click="showDeleteModal = true">Delete</button>
+  <div>    
+    <button-modal @trigger="showDeleteModal = true">Delete</button-modal>
 
     <modal v-if="showDeleteModal" @close="showDeleteModal = false">
       <div slot="header">
@@ -9,7 +9,7 @@
       <div slot="body">
        <h4>Are you sure delete user '<b>{{ user.name }}</b>' ?</h4>
        <div>
-        <span><button class="btn btn-danger w-50 m-2 p-2" @click="deleteUser">Delete</button></span>
+        <span><button class="btn btn-danger w-50 m-2 p-2" @click="deleteUser(user.id)">Delete</button></span>
         <span><button class="btn btn-default w-50 m-2 p-2" @click="showDeleteModal = false">Cancel</button></span>
        </div>
       </div>
@@ -22,6 +22,7 @@
 <script>
 import userService from '@/api/userService';
 import Modal from '@/components/Modal';
+import ButtonModal from '@/components/ButtonModal';
 import UserForm from '@/components/user/UserForm';
 import userSchema from '@/api/userSchema';
 
@@ -30,12 +31,17 @@ export default {
 
   components: {
     UserForm,
+    ButtonModal,
     Modal,
+  },
+  
+  data() {
+    return {
+      showDeleteModal: false,
+    };
   },
 
   props: {
-    title: '',
-    showDeleteModal: false,
     user: userSchema,
     users: {
       type: Array,
@@ -48,18 +54,16 @@ export default {
       this.showDeleteModal = false;
     },
 
-    deleteUser() {
-      const users = this.users.filter(user => user.id !== this.user.id);
-      this.users = users;
-
+    deleteUser(userId) {
       // Mock server responses the Postman example
-      return userService.deleteUser(this.user.id)
+      return userService.deleteUser('28e3cb460-770f-11e9-814a-e7308885276f')
         .then((res) => res.data)
-        .then(data => {
-          // console.log('delete', this.users);
-          // const users = this.users.filter(user => user.id !== this.user.id);
-          // this.users = users;
-          // console.log(this.users);
+        .then(() => {
+          window.console.log('OK delete', userId);
+          // Simulate users has been deleted in BBDD and this.users has changed
+          let users = this.users.slice();
+          users = users.filter(user => user.id !== userId);
+          this.$emit('change', users);
           this.close();
         });
     },

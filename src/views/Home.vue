@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <user-list :users="users"></user-list>
-    <new-user-modal :users="users"></new-user-modal>
   </div>
 </template>
 
@@ -32,7 +31,6 @@ export default {
       this.users = await this.getUsers();
 		});
 	},
-  
 
   methods: {
     getUsers() {

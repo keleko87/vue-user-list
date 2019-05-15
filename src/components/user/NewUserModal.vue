@@ -7,7 +7,11 @@
         <h3>New User</h3>
       </div>
       <div slot="body">
-        <user-form :users="users" @close="close"></user-form>
+        <user-form 
+          :users="users"           
+          @change="changeUsers($event)"
+          @close="close">
+        </user-form>
       </div>
       <div slot="footer"></div>
     </modal>
@@ -44,6 +48,10 @@ export default {
   methods: {
     close() {
       this.showModal = false;
+    },
+
+    changeUsers(usersChanged) {
+      this.users = usersChanged;
     },
   },
 }

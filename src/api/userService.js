@@ -33,12 +33,12 @@ export default {
     return apiRequest(request);
   },
 
-  updateUser(userId, body) {
+  updateUser(userId, data) {
     const url = `${API_URL}${USERS}/updateUsersById/${userId}`;
     const request = {
       url,
       method: 'PUT',
-      body,
+      data,
     };
 
     return apiRequest(request);

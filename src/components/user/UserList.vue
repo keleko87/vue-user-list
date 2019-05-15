@@ -59,8 +59,8 @@
             <td>{{ getDateStamp(user.birthDate) }}</td>
             <td>{{ user.address.street }}, {{ user.address.state }}, {{ user.address.country }}, {{ user.address.zip }}</td>
             <td class="text__center">
-              <edit-user-modal :users="users" :user="user"></edit-user-modal>  
-              <delete-user-modal :users="users" :user="user"></delete-user-modal>
+              <edit-user-modal :users="users" :user="user" @change="changeUsers($event)"></edit-user-modal>
+              <delete-user-modal :users="users" :user="user" @change="changeUsers($event)"></delete-user-modal>
             </td>
           </tr>
         </tbody>
@@ -91,7 +91,9 @@ import userService from '@/api/userService';
 import NewUserModal from '@/components/user/NewUserModal';
 import EditUserModal from '@/components/user/EditUserModal';
 import DeleteUserModal from '@/components/user/DeleteUserModal';
+import UserForm from '@/components/user/UserForm';
 import Modal from '@/components/Modal';
+import ButtonModal from '@/components/ButtonModal';
 import SortField from '@/components/SortField';
 import Loader from '@/components/Loader';
 import userUtils from '@/mixins/userUtils';
@@ -101,9 +103,11 @@ export default {
 
   components: {
     NewUserModal,
-    EditUserModal,
     DeleteUserModal,
+    EditUserModal,
+    UserForm,
     Modal,
+    ButtonModal,
     SortField,
     Loader
   },
@@ -131,8 +135,8 @@ export default {
   },
   
   methods: {
-    parentHandler() {
-      this.$refs.modal1.close();
+    changeUsers(usersChanged) {
+      this.users = usersChanged;
     },
 
     sort (s) {

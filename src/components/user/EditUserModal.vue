@@ -1,15 +1,16 @@
 <template>
   <div>
-    <button :id="`show-modal-${user.id}`" class="edit" @click="showEditModal = true">Edit</button>
+    <button-modal @trigger="showEditModal = true">Update</button-modal>
 
-    <modal v-if="showEditModal" @close="close">
+    <modal v-if="showEditModal">
       <div slot="header">
         <h3>Edit User</h3>
       </div>
       <div slot="body">
         <user-form 
           :users="users" 
-          :userInfo="user" 
+          :userInfo="user"
+          @change="changeUsers($event)"
           @close="close">
         </user-form>
       </div>
@@ -21,6 +22,7 @@
 <script>
 import userService from '@/api/userService';
 import Modal from '@/components/Modal';
+import ButtonModal from '@/components/ButtonModal';
 import UserForm from '@/components/user/UserForm';
 import userSchema from '@/api/userSchema';
 
@@ -30,11 +32,16 @@ export default {
   components: {
     UserForm,
     Modal,
+    ButtonModal,
+  },
+
+  data() {
+    return {
+      showEditModal: false,
+    };
   },
 
   props: {
-    title: '',
-    showEditModal: false,
     user: userSchema,
     users: {
       type: Array,
@@ -43,9 +50,12 @@ export default {
   },
 
   methods: {
+    changeUsers(usersChanged) {
+      this.users = usersChanged;
+    },
+
     close() {
       this.showEditModal = false;
-      this.$emit('close', true);
     },
   },
 }
