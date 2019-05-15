@@ -1,0 +1,937 @@
+{
+	"info": {
+		"name": "Users",
+		"_postman_id": "2d808a26-197c-436d-540d-637d24d1a826",
+		"description": "Users API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createUsers",
+			"description": "Folder for createUsers",
+			"item": [
+				{
+					"name": "users/createUsers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{postman_api_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"7a2cb460-770f-11e9-814a-e7308335276f\",\n    \"name\": \"Paul\",\n    \"email\": \"paul2@gmail.com\",\n    \"birthDate\": \"1988-12-30T00:00:00.000Z\",\n    \"address\": {\n        \"id\": 1,\n        \"street\": \"Calle Aravaca\",\n        \"state\": \"Madrid\",\n        \"city\": \"Madrid\",\n        \"country\": \"Spain\",\n        \"zip\": \"23212\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{url}}/{{basePath}}/createUsers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{basePath}}",
+								"createUsers"
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "7f52f766-762c-4e5f-88b3-e1c3b0a33f21",
+							"name": "users/createUsers",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{postman_api_key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\n\t  \"id\": 1,\n\t  \"name\": \"Mario\",\n\t  \"email\": \"luis@gmail.com\",\n\t  \"birthDate\": \"21-02-2000\",\n\t  \"address\": {\n\t    \"id\": 1,\n\t    \"street\": \"Paseo Castellana 23\",\n\t    \"state\": \"Madrid\",\n\t    \"city\": \";Madrid\",\n\t    \"country\": \"Spain\",\n\t    \"zip\": \"23232\"\n\t  }\n\t}"
+								},
+								"url": {
+									"raw": "{{url}}/users/createUsers",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"createUsers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "",
+									"name": "Access-Control-Expose-Headers",
+									"description": "Lets a server whitelist headers that browsers are allowed to access."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"name": "Content-Encoding",
+									"description": "The type of encoding used on the data."
+								},
+								{
+									"key": "Content-Length",
+									"value": "148",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 May 2019 11:54:56 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"af-MmpVeTvfnSW88c4riXD0uw\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding",
+									"name": "Vary",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1557575756",
+									"name": "X-RateLimit-Reset",
+									"description": "Custom header"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=3c6d430aeae2699e",
+									"name": "x-srv-span",
+									"description": "Custom header"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=f0a3bc8c019710f8",
+									"name": "x-srv-trace",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"responseTime": 327,
+							"body": "{\n    \"id\": \"7a2cb460-770f-11e9-814a-e7308335276f\",\n    \"name\": \"Paul\",\n    \"email\": \"paul2@gmail.com\",\n    \"birthDate\": \"1988-12-30T00:00:00.000Z\",\n    \"address\": {\n        \"id\": 1,\n        \"street\": \"Calle Aravaca\",\n        \"state\": \"Madrid\",\n        \"city\": \"Madrid\",\n        \"country\": \"Spain\",\n        \"zip\": \"23212\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "deleteUsersById",
+			"description": "Folder for deleteUsersById",
+			"item": [
+				{
+					"name": "users/deleteUsersById/:userId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{postman_api_key}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/{{basePath}}/deleteUsersById/{{userId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{basePath}}",
+								"deleteUsersById",
+								"{{userId}}"
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "9046d2ff-1fe7-4c71-80b2-675c424b1701",
+							"name": "deleteUsersById/:userId",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{postman_api_key}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{url}}/users/deleteUsersById/28e3cb460-770f-11e9-814a-e7308885276f",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"deleteUsersById",
+										"28e3cb460-770f-11e9-814a-e7308885276f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "",
+									"name": "Access-Control-Expose-Headers",
+									"description": "Lets a server whitelist headers that browsers are allowed to access."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"name": "Content-Encoding",
+									"description": "The type of encoding used on the data."
+								},
+								{
+									"key": "Content-Length",
+									"value": "169",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 May 2019 17:03:00 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"be-clTy47fghtHGcL07pbp+pA\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding",
+									"name": "Vary",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=78a169ba6c30a17e",
+									"name": "x-srv-span",
+									"description": "Custom header"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=e602fa096aa82535",
+									"name": "x-srv-trace",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"responseTime": 397,
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "getusers",
+			"description": "Folder for getusers",
+			"item": [
+				{
+					"name": "users/getusers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{postman_api_key}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/{{basePath}}/getusers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{basePath}}",
+								"getusers"
+							]
+						},
+						"description": "Get all users"
+					},
+					"response": [
+						{
+							"id": "96e9da45-290d-4818-bc55-85228066c84c",
+							"name": "users/getusers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{postman_api_key}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{url}}/users/getusers",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"getusers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "",
+									"name": "Access-Control-Expose-Headers",
+									"description": "Lets a server whitelist headers that browsers are allowed to access."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"name": "Content-Encoding",
+									"description": "The type of encoding used on the data."
+								},
+								{
+									"key": "Content-Length",
+									"value": "231",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 May 2019 16:11:34 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c-OEx6bsFJpb5klTBWyV5YQQ\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding",
+									"name": "Vary",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1557591154",
+									"name": "X-RateLimit-Reset",
+									"description": "Custom header"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=62970fa043fb8332",
+									"name": "x-srv-span",
+									"description": "Custom header"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=8770dd007964c009",
+									"name": "x-srv-trace",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"responseTime": 537,
+							"body": "[\n    {\n        \"id\": \"8e2cb460-770f-11e9-814a-e7308885276f\",\n        \"name\": \"Mario\",\n        \"email\": \"mariom@gmail.com\",\n        \"birthDate\": \"2000-02-12T00:00:00.000Z\",\n        \"address\": {\n            \"id\": 1,\n            \"street\": \"Paseo Castellana\",\n            \"state\": \"Madrid\",\n            \"city\": \"Madrid\",\n            \"country\": \"Spain\",\n            \"zip\": \"23212\"\n        }\n    },\n    {\n        \"id\": \"7a2cb460-770f-11e9-814a-e7308335276f\",\n        \"name\": \"Paul\",\n        \"email\": \"paul2@gmail.com\",\n        \"birthDate\": \"1988-12-30T00:00:00.000Z\",\n        \"address\": {\n            \"id\": 1,\n            \"street\": \"Calle Aravaca\",\n            \"state\": \"Madrid\",\n            \"city\": \"Madrid\",\n            \"country\": \"Spain\",\n            \"zip\": \"23212\"\n        }\n    },\n    {\n        \"id\": \"8e3cb340-770f-11e9-814a-e7308885276f\",\n        \"name\": \"Pepe\",\n        \"email\": \"pepe@gmail.com\",\n        \"birthDate\": \"1999-12-12T00:00:00.000Z\",\n        \"address\": {\n            \"id\": 1,\n            \"street\": \"Paseo Recoletos 12, 23 B\",\n            \"state\": \"Madrid\",\n            \"city\": \"Madrid\",\n            \"country\": \"Spain\",\n            \"zip\": \"23212\"\n        }\n    },\n    {\n        \"id\": \"28e3cb460-770f-11e9-814a-e7308885276f\",\n        \"name\": \"Josephus\",\n        \"email\": \"jose@gmail.com\",\n        \"birthDate\": \"2001-02-12T00:00:00.000Z\",\n        \"address\": {\n            \"id\": 1,\n            \"street\": \"Calle Calatrava 23\",\n            \"state\": \"Madrid\",\n            \"city\": \"Madrid\",\n            \"country\": \"Spain\",\n            \"zip\": \"28033\"\n        }\n    },\n    {\n        \"id\": \"28e4wb430-770f-11e9-814a-e7308885276f\",\n        \"name\": \"Luisinho\",\n        \"email\": \"lysi@gmail.com\",\n        \"birthDate\": \"1987-10-14T00:00:00.000Z\",\n        \"address\": {\n            \"id\": 1,\n            \"street\": \"Calle Lopez de Hoyos 203\",\n            \"state\": \"Madrid\",\n            \"city\": \"Madrid\",\n            \"country\": \"Spain\",\n            \"zip\": \"28033\"\n        }\n    },\n    {\n        \"id\": \"28e3cb460-770f-11e9-814a-e7308885276f\",\n        \"name\": \"Sarah\",\n        \"email\": \"sarah@gmail.com\",\n        \"birthDate\": \"2001-02-12T00:00:00.000Z\",\n        \"address\": {\n            \"id\": 1,\n            \"street\": \"Calle Nuñez de Balboa 23\",\n            \"state\": \"Madrid\",\n            \"city\": \"Madrid\",\n            \"country\": \"Spain\",\n            \"zip\": \"28030\"\n        }\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "getusersById",
+			"description": "Folder for getusersById",
+			"item": [
+				{
+					"name": "users/getusersById/:userId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{postman_api_key}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/{{basePath}}/getusersById/{{userId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{basePath}}",
+								"getusersById",
+								"{{userId}}"
+							]
+						},
+						"description": "Get one user"
+					},
+					"response": [
+						{
+							"id": "32a66750-e70f-4a6d-9841-f586a6be2a50",
+							"name": "users/getusersById/:userI",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{postman_api_key}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{url}}/users/getusersById/28e3cb460-770f-11e9-814a-e7308885276f",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"getusersById",
+										"28e3cb460-770f-11e9-814a-e7308885276f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "",
+									"name": "Access-Control-Expose-Headers",
+									"description": "Lets a server whitelist headers that browsers are allowed to access."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"name": "Content-Encoding",
+									"description": "The type of encoding used on the data."
+								},
+								{
+									"key": "Content-Length",
+									"value": "166",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 May 2019 17:06:36 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ba-CDcPhL6ve1X9pWDvQKcv7w\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding",
+									"name": "Vary",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=e40f9b23a3f09acd",
+									"name": "x-srv-span",
+									"description": "Custom header"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=c0d1e1476dd65586",
+									"name": "x-srv-trace",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"responseTime": 408,
+							"body": "{\n    \"id\": \"7a2cb460-770f-11e9-814a-e7308335276f\",\n    \"name\": \"Paul\",\n    \"email\": \"paul2@gmail.com\",\n    \"birthDate\": \"1988-12-30T00:00:00.000Z\",\n    \"address\": {\n        \"id\": 1,\n        \"street\": \"Calle Aravaca\",\n        \"state\": \"Madrid\",\n        \"city\": \"Madrid\",\n        \"country\": \"Spain\",\n        \"zip\": \"23212\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "updateUsersById",
+			"description": "Folder for updateUsersById",
+			"item": [
+				{
+					"name": "users/updateUsersById/:userId",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{postman_api_key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Paul\",\n    \"email\": \"paul2@gmail.com\",\n    \"birthDate\": \"1988-12-30T00:00:00.000Z\",\n    \"address\": {\n        \"id\": 1,\n        \"street\": \"Calle León 544\",\n        \"state\": \"Madrid\",\n        \"city\": \"Madrid\",\n        \"country\": \"Spain\",\n        \"zip\": \"23212\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{url}}/{{basePath}}/updateUsersById/{{userId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{basePath}}",
+								"updateUsersById",
+								"{{userId}}"
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "a7b2a807-6d09-41ee-8484-6cc8bff75b16",
+							"name": "users/updateUsersById/:userId",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{postman_api_key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"7a2cb460-770f-11e9-814a-e7308335276f\",\n    \"name\": \"Paul\",\n    \"email\": \"paul2@gmail.com\",\n    \"birthDate\": \"1988-12-30T00:00:00.000Z\",\n    \"address\": {\n        \"id\": 1,\n        \"street\": \"Calle León 544\",\n        \"state\": \"Madrid\",\n        \"city\": \"Madrid\",\n        \"country\": \"Spain\",\n        \"zip\": \"23212\"\n    }\n}"
+								},
+								"url": {
+									"raw": "{{url}}/{{basePath}}/updateUsersById/28e3cb460-770f-11e9-814a-e7308885276f",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{basePath}}",
+										"updateUsersById",
+										"28e3cb460-770f-11e9-814a-e7308885276f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "",
+									"name": "Access-Control-Allow-Credentials",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "",
+									"name": "Access-Control-Allow-Headers",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "",
+									"name": "Access-Control-Allow-Methods",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": ""
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "",
+									"name": "Access-Control-Expose-Headers",
+									"description": ""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"name": "Content-Encoding",
+									"description": ""
+								},
+								{
+									"key": "Content-Length",
+									"value": "183",
+									"name": "Content-Length",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 May 2019 17:28:31 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"129-S01Ui582aInMYzy71i1toQ\"",
+									"name": "ETag",
+									"description": ""
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": ""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding",
+									"name": "Vary",
+									"description": ""
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": ""
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59",
+									"name": "X-RateLimit-Remaining",
+									"description": ""
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1557595771",
+									"name": "X-RateLimit-Reset",
+									"description": ""
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=987233fac0ae57c6",
+									"name": "x-srv-span",
+									"description": ""
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=951c4d0a01af5022",
+									"name": "x-srv-trace",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"responseTime": 637,
+							"body": "{\n    \"name\": \"Paul\",\n    \"email\": \"paul2@gmail.com\",\n    \"birthDate\": \"1988-12-30T00:00:00.000Z\",\n    \"address\": {\n        \"street\": \"Calle León 544\",\n        \"state\": \"Madrid\",\n        \"city\": \"Madrid\",\n        \"country\": \"Spain\",\n        \"zip\": \"23212\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
