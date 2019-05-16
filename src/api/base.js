@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://c9d093e3-eaa1-42d7-a7eb-f437679c2a30.mock.pstmn.io';
+const API_URL = 'https://c9b61e1b-54a3-46bf-b318-48b44a056f5e.mock.pstmn.io';
 const USERS = '/users';
 
 const apiRequest = async (request) => {

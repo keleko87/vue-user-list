@@ -1,14 +1,13 @@
 {
 	"info": {
+		"_postman_id": "bc340795-2661-4495-81c6-52dbec475066",
 		"name": "Users",
-		"_postman_id": "e4219cdd-450f-e7b6-13b0-455850e6f252",
 		"description": "Users API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "createUsers",
-			"description": "Folder for createUsers",
 			"item": [
 				{
 					"name": "users/createUsers",
@@ -45,7 +44,6 @@
 					},
 					"response": [
 						{
-							"id": "93e28b8a-9329-4cf1-971a-f9d90266d9c7",
 							"name": "users/createUsers",
 							"originalRequest": {
 								"method": "POST",
@@ -81,7 +79,6 @@
 							"status": "OK",
 							"code": 201,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "text",
 							"header": [
 								{
 									"key": "Access-Control-Allow-Credentials",
@@ -193,16 +190,15 @@
 								}
 							],
 							"cookie": [],
-							"responseTime": 327,
 							"body": "{\n    \"id\": \"7a2cb460-770f-11e9-814a-e7308335276f\",\n    \"name\": \"Paul\",\n    \"email\": \"paul2@gmail.com\",\n    \"birthDate\": \"1988-12-30T00:00:00.000Z\",\n    \"address\": {\n        \"id\": 1,\n        \"street\": \"Calle Aravaca\",\n        \"state\": \"Madrid\",\n        \"city\": \"Madrid\",\n        \"country\": \"Spain\",\n        \"zip\": \"23212\"\n    }\n}"
 						}
 					]
 				}
-			]
+			],
+			"description": "Folder for createUsers"
 		},
 		{
 			"name": "deleteUsersById",
-			"description": "Folder for deleteUsersById",
 			"item": [
 				{
 					"name": "users/deleteUsersById/:userId",
@@ -222,7 +218,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {},
 						"url": {
 							"raw": "{{url}}/{{basePath}}/deleteUsersById/{{userId}}",
 							"host": [
@@ -237,7 +232,6 @@
 					},
 					"response": [
 						{
-							"id": "01b7eeda-3793-4da4-ad81-115fe88e686a",
 							"name": "deleteUsersById/:userId",
 							"originalRequest": {
 								"method": "DELETE",
@@ -274,7 +268,6 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "text",
 							"header": [
 								{
 									"key": "Access-Control-Allow-Credentials",
@@ -368,16 +361,15 @@
 								}
 							],
 							"cookie": [],
-							"responseTime": 397,
 							"body": ""
 						}
 					]
 				}
-			]
+			],
+			"description": "Folder for deleteUsersById"
 		},
 		{
 			"name": "getusers",
-			"description": "Folder for getusers",
 			"item": [
 				{
 					"name": "users/getusers",
@@ -397,7 +389,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {},
 						"url": {
 							"raw": "{{url}}/{{basePath}}/getusers",
 							"host": [
@@ -412,7 +403,6 @@
 					},
 					"response": [
 						{
-							"id": "0258f199-b56f-4952-98ef-8c1975cbf85f",
 							"name": "users/getusers",
 							"originalRequest": {
 								"method": "GET",
@@ -430,10 +420,6 @@
 										"value": "{{postman_api_key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{url}}/users/getusers",
 									"host": [
@@ -448,7 +434,6 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "text",
 							"header": [
 								{
 									"key": "Access-Control-Allow-Credentials",
@@ -560,16 +545,15 @@
 								}
 							],
 							"cookie": [],
-							"responseTime": 537,
 							"body": "[\n    {\n        \"id\": \"1e2cb460-770f-11e9-814a-e7308885276f\",\n        \"name\": \"Mario\",\n        \"email\": \"mariom@gmail.com\",\n        \"birthDate\": \"2000-02-12T00:00:00.000Z\",\n        \"address\": {\n            \"id\": 1,\n            \"street\": \"Paseo Castellana\",\n            \"state\": \"Madrid\",\n            \"city\": \"Madrid\",\n            \"country\": \"Spain\",\n            \"zip\": \"23212\"\n        }\n    },\n    {\n        \"id\": \"2a2cb460-770f-11e9-814a-e7308335276f\",\n        \"name\": \"Paul\",\n        \"email\": \"paul2@gmail.com\",\n        \"birthDate\": \"1988-12-30T00:00:00.000Z\",\n        \"address\": {\n            \"id\": 1,\n            \"street\": \"Calle Aravaca\",\n            \"state\": \"Madrid\",\n            \"city\": \"Madrid\",\n            \"country\": \"Spain\",\n            \"zip\": \"23212\"\n        }\n    },\n    {\n        \"id\": \"3e3cb340-770f-11e9-814a-e7308885276f\",\n        \"name\": \"Pepe\",\n        \"email\": \"pepe@gmail.com\",\n        \"birthDate\": \"1999-12-12T00:00:00.000Z\",\n        \"address\": {\n            \"id\": 1,\n            \"street\": \"Paseo Recoletos 12, 23 B\",\n            \"state\": \"Madrid\",\n            \"city\": \"Madrid\",\n            \"country\": \"Spain\",\n            \"zip\": \"23212\"\n        }\n    },\n    {\n        \"id\": \"4de3cb460-770f-11e9-814a-e7308885276f\",\n        \"name\": \"Josephus\",\n        \"email\": \"jose@gmail.com\",\n        \"birthDate\": \"2001-02-12T00:00:00.000Z\",\n        \"address\": {\n            \"id\": 1,\n            \"street\": \"Calle Calatrava 23\",\n            \"state\": \"Madrid\",\n            \"city\": \"Madrid\",\n            \"country\": \"Spain\",\n            \"zip\": \"28033\"\n        }\n    },\n    {\n        \"id\": \"5se4wb430-770f-11e9-814a-e7308885276f\",\n        \"name\": \"Luisinho\",\n        \"email\": \"lysi@gmail.com\",\n        \"birthDate\": \"1987-10-14T00:00:00.000Z\",\n        \"address\": {\n            \"id\": 1,\n            \"street\": \"Calle Lopez de Hoyos 203\",\n            \"state\": \"Madrid\",\n            \"city\": \"Madrid\",\n            \"country\": \"Spain\",\n            \"zip\": \"28033\"\n        }\n    },\n    {\n        \"id\": \"6we3cb460-770f-11e9-814a-e7308885276f\",\n        \"name\": \"Sarah\",\n        \"email\": \"sarah@gmail.com\",\n        \"birthDate\": \"2001-02-12T00:00:00.000Z\",\n        \"address\": {\n            \"id\": 1,\n            \"street\": \"Calle Nuñez de Balboa 23\",\n            \"state\": \"Madrid\",\n            \"city\": \"Madrid\",\n            \"country\": \"Spain\",\n            \"zip\": \"28030\"\n        }\n    }\n]"
 						}
 					]
 				}
-			]
+			],
+			"description": "Folder for getusers"
 		},
 		{
 			"name": "getusersById",
-			"description": "Folder for getusersById",
 			"item": [
 				{
 					"name": "users/getusersById/:userId",
@@ -589,7 +573,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {},
 						"url": {
 							"raw": "{{url}}/{{basePath}}/getusersById/{{userId}}",
 							"host": [
@@ -605,7 +588,6 @@
 					},
 					"response": [
 						{
-							"id": "f1c67254-7314-4887-bfd4-55f9f958f2ba",
 							"name": "users/getusersById/:userI",
 							"originalRequest": {
 								"method": "GET",
@@ -623,10 +605,6 @@
 										"value": "{{postman_api_key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{url}}/users/getusersById/28e3cb460-770f-11e9-814a-e7308885276f",
 									"host": [
@@ -642,7 +620,6 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "text",
 							"header": [
 								{
 									"key": "Access-Control-Allow-Credentials",
@@ -736,16 +713,15 @@
 								}
 							],
 							"cookie": [],
-							"responseTime": 408,
 							"body": "{\n    \"id\": \"7a2cb460-770f-11e9-814a-e7308335276f\",\n    \"name\": \"Paul\",\n    \"email\": \"paul2@gmail.com\",\n    \"birthDate\": \"1988-12-30T00:00:00.000Z\",\n    \"address\": {\n        \"id\": 1,\n        \"street\": \"Calle Aravaca\",\n        \"state\": \"Madrid\",\n        \"city\": \"Madrid\",\n        \"country\": \"Spain\",\n        \"zip\": \"23212\"\n    }\n}"
 						}
 					]
 				}
-			]
+			],
+			"description": "Folder for getusersById"
 		},
 		{
 			"name": "updateUsersById",
-			"description": "Folder for updateUsersById",
 			"item": [
 				{
 					"name": "users/updateUsersById/:userId",
@@ -783,7 +759,6 @@
 					},
 					"response": [
 						{
-							"id": "9a7bd2fc-ea12-45b2-a57d-831c596b916e",
 							"name": "users/updateUsersById/:userId",
 							"originalRequest": {
 								"method": "PUT",
@@ -820,7 +795,6 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "text",
 							"header": [
 								{
 									"key": "Access-Control-Allow-Credentials",
@@ -932,12 +906,12 @@
 								}
 							],
 							"cookie": [],
-							"responseTime": 637,
 							"body": "{\n\t\"id\": \"28e3cb460-770f-11e9-814a-e7308885276f\",\n    \"name\": \"Paul\",\n    \"email\": \"paul2@gmail.com\",\n    \"birthDate\": \"1988-12-30T00:00:00.000Z\",\n    \"address\": {\n        \"street\": \"Calle León 544\",\n        \"state\": \"Madrid\",\n        \"city\": \"Madrid\",\n        \"country\": \"Spain\",\n        \"zip\": \"23212\"\n    }\n}"
 						}
 					]
 				}
-			]
+			],
+			"description": "Folder for updateUsersById"
 		}
 	]
 }
